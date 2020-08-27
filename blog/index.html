@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Datasciencekey">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/images/keyLogo.png">
+  <title>Data Science Key</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="../assets/css/fontawesome.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/owl.css">
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Additional Scripts -->
+  <script src="../assets/js/custom.js"></script>
+  <script src="../assets/js/owl.js"></script>
+  <script src="../assets/js/slick.js"></script>
+  <script src="../assets/js/accordions.js"></script>
+
+  <!-- Script file --> 
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <script src="../assets/js/callback.js"></script>
+  <script src="../assets/js/HeaderFooter.js"></script>
+
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Lato:400,600,700);
+
+    .snip1527 {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+      color: #ffffff;
+      float: left;
+      font-family: 'Lato', Arial, sans-serif;
+      font-size: 16px;
+      /* margin: 10px 0.2%; */
+      /* max-width: 310px; */
+      max-height: 400px;
+      min-height: 400px;
+      min-width: 250px;
+      overflow: hidden;
+      position: relative;
+      text-align: left;
+      width: 100%;
+    }
+
+    .snip1527 * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: all 0.25s ease;
+      transition: all 0.25s ease;
+    }
+
+    .snip1527 img {
+      max-width: 100%;
+      vertical-align: top;
+      position: relative;
+      min-height: 400px;
+    }
+
+    .snip1527 figcaption {
+      padding: 25px 20px 25px;
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .snip1527 figcaption:before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #700877;
+      content: '';
+      background: rgb(24, 144, 255);
+      background: linear-gradient(90deg, rgba(24, 144, 255, 1) 0%, rgba(0, 0, 0, 1) 50%);
+      /* background: -moz-linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
+        background: -webkit-linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%);
+        background: linear-gradient(90deg, #700877 0%, #ff2759 100%, #ff2759 100%); */
+      opacity: 0.8;
+      z-index: -1;
+    }
+
+    .snip1527 .date {
+      background-color: #fff;
+      border-radius: 50%;
+      color: #700877;
+      font-size: 18px;
+      font-weight: 700;
+      min-height: 48px;
+      min-width: 48px;
+      padding: 10px 0;
+      position: absolute;
+      right: 15px;
+      text-align: center;
+      text-transform: uppercase;
+      top: -25px;
+    }
+
+    .snip1527 .date span {
+      display: block;
+      line-height: 14px;
+    }
+
+    .snip1527 .date .month {
+      font-size: 11px;
+    }
+
+    .snip1527 h3,
+    .snip1527 p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .snip1527 h3 {
+      display: inline-block;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      margin-bottom: 5px;
+    }
+
+    .snip1527 p {
+      font-size: 0.8em;
+      line-height: 1.6em;
+      margin-bottom: 0px;
+    }
+
+    .snip1527 a {
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .snip1527:hover img,
+    .snip1527.hover img {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+
+
+    /* Demo purposes only */
+  </style>
+</head>
+
+<body>
+  <!--Request Callback-->
+  <div id="callback"></div>
+  <!-- Request Callback End -->
+  <!-- ***** Preloader Start ***** -->
+  <div id="preloader">
+    <div class="jumper">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+  <!-- MOdal-->
+  <div id="popup-reg" class="popup">
+    <div class="popup-content">
+      <div class="event-header">
+        <h6>Say Hi!</h6>
+      </div>
+      <form id="send" class="send-form">
+        <div class="form-group">
+          <label for="name">
+            <i class="fa fa-user"></i>
+          </label>
+          <input type="text" placeholder="Enter name..." id="name" name="name" required="required">
+
+        </div>
+        <div class="form-group">
+          <label for="phone">
+            <i class="fa fa-phone"></i>
+          </label>
+          <input type="tel" pattern="[0-9]{10}" placeholder="Enter phone..." id="phone" name="phone"
+            required="required">
+
+        </div>
+        <div class="form-group">
+          <label for="mail">
+            <i class="fa fa-envelope"></i>
+          </label>
+          <input type="email" placeholder="Enter mail..." id="mail" name="mail" required="required">
+
+        </div>
+        <div class="form-group">
+          <label for="text">
+            <i class="fa fa-comment"></i>
+          </label>
+          <textarea placeholder="Enter message..." name="text" id="text"></textarea>
+
+        </div>
+        <button type="submit" class="main-btn-rect" name="text" value="Send">
+          <i class="fa fa-paper-plane"></i>Send</button>
+      </form>
+      <span class="fade-out main-btn-circle">╳</span>
+    </div>
+  </div>
+  <!-- modal end-->
+  <!-- Header -->
+  <div id="subHeader"></div>
+  <div id="pageHeader"></div>
+
+  <!-- Page Content -->
+  <div class="page-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Freshly Brewed Articles</h1>
+          <span>All about Data</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="single-services">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <figure class="snip1527">
+            <div class="image"><img src="https://miro.medium.com/max/1400/1*s7He49rEONuDkS0qxw_yvA.png"
+                alt="pr-sample23" /></div>
+            <figcaption>
+              <div class="date"><span class="day">20</span><span class="month">June</span></div>
+              <h3>Multiclass text classification using bidirectional Recurrent Neural Network</h3>
+              <p style="color:white">
+                In this article, we will learn about the basic architecture of the LSTM network. Then we will learn how
+                we can build an LSTM machine learning model using Tensorflow 2.0 and Keras. For this application, we
+                will use a competition dataset from Kaggle.
+              </p>
+            </figcaption>
+            <a
+              href="https://medium.com/analytics-vidhya/author-multi-class-text-classification-using-bidirectional-lstm-keras-c9a533a1cc4a?source=friends_link&sk=ed153d5125eb282928380084611ef24f"></a>
+          </figure>
+        </div>
+        <div class="col-md-4">
+          <figure class="snip1527">
+            <div class="image"><img src="https://miro.medium.com/max/1400/1*4FeRsslkfggjsYkdaGWZQw.png"
+                alt="pr-sample23" /></div>
+            <figcaption>
+              <div class="date"><span class="day">20</span><span class="month">June</span></div>
+              <h3>Classification using Long Short Term Memory & GloVe (Global Vectors for Word Representation)</h3>
+              <p style="color:white">
+
+                In this article, we will learn about the basic understanding of Word2Vec and pre-trained word embedding,
+                Glove(Global Vectors for Word Representation). Then we will build an LSTM(Long Short Term Memory) model
+                using a pre-trained Glove word embedding.
+              </p>
+            </figcaption>
+            <a
+              href="https://medium.com/analytics-vidhya/classification-using-long-short-term-memory-glove-global-vectors-for-word-representation-254d02d5e158?source=friends_link&sk=39ab305304b723e91011347c9b0e5d82"></a>
+          </figure>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <figure class="snip1527">
+            <div class="image"><img src="../assets/images/slide_new1.jpg" alt="pr-sample23" /></div>
+            <figcaption>
+              <div class="date"><span class="day">28</span><span class="month">Oct</span></div>
+              <h3>The World Ended Yesterday</h3>
+              <p>
+
+                You know what we need, Hobbes? We need an attitude. Yeah, you can't be cool if you don't have an
+                attitude.
+              </p>
+            </figcaption>
+            <a href="#"></a>
+          </figure>
+        </div>
+        <div class="col-md-8">
+          <figure class="snip1527">
+            <div class="image"><img src="../assets/images/slide_new1.jpg" alt="pr-sample23" /></div>
+            <figcaption>
+              <div class="date"><span class="day">28</span><span class="month">Oct</span></div>
+              <h3>The World Ended Yesterday</h3>
+              <p>
+
+                You know what we need, Hobbes? We need an attitude. Yeah, you can't be cool if you don't have an
+                attitude.
+              </p>
+            </figcaption>
+            <a href="#"></a>
+          </figure>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <figure class="snip1527">
+            <div class="image"><img src="../assets/images/slide_new1.jpg" alt="pr-sample23" /></div>
+            <figcaption>
+              <div class="date"><span class="day">28</span><span class="month">Oct</span></div>
+              <h3>The World Ended Yesterday</h3>
+              <p>
+
+                You know what we need, Hobbes? We need an attitude. Yeah, you can't be cool if you don't have an
+                attitude.
+              </p>
+            </figcaption>
+            <a href="#"></a>
+          </figure>
+        </div>
+        <div class="col-md-6">
+          <figure class="snip1527">
+            <div class="image"><img src="../assets/images/slide_new1.jpg" alt="pr-sample23" /></div>
+            <figcaption>
+              <div class="date"><span class="day">28</span><span class="month">Oct</span></div>
+              <h3>The World Ended Yesterday</h3>
+              <p>
+
+                You know what we need, Hobbes? We need an attitude. Yeah, you can't be cool if you don't have an
+                attitude.
+              </p>
+            </figcaption>
+            <a href="#"></a>
+          </figure>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <figure class="snip1527">
+            <div class="image"><img src="../assets/images/slide_new1.jpg" alt="pr-sample23" /></div>
+            <figcaption>
+              <div class="date"><span class="day">28</span><span class="month">Oct</span></div>
+              <h3>The World Ended Yesterday</h3>
+              <p>
+
+                You know what we need, Hobbes? We need an attitude. Yeah, you can't be cool if you don't have an
+                attitude.
+              </p>
+            </figcaption>
+            <a href="#"></a>
+          </figure>
+        </div>
+        <div class="col-md-4">
+          <figure class="snip1527">
+            <div class="image"><img src="../assets/images/slide_new1.jpg" alt="pr-sample23" /></div>
+            <figcaption>
+              <div class="date"><span class="day">28</span><span class="month">Oct</span></div>
+              <h3>The World Ended Yesterday</h3>
+              <p>
+
+                You know what we need, Hobbes? We need an attitude. Yeah, you can't be cool if you don't have an
+                attitude.
+              </p>
+            </figcaption>
+            <a href="#"></a>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="partners">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="owl-partners owl-carousel">
+            <div class="partner-item">
+              <img src="../assets/images/client-01.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer Starts Here -->
+  <div id="pageFooter"></div>
+  <div id="pageSubFooter"></div>
+  <!-- Footer Ends Here -->
+
+  <script>
+    /* Demo purposes only */
+    $(".hover").mouseleave(
+      function () {
+        $(this).removeClass("hover");
+      }
+    );
+  </script>
+</body>
+
+</html>

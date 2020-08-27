@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Data Science Key">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/images/keyLogo.png">
+  <title>Data Science Key</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="../assets/css/fontawesome.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/owl.css">
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Additional Scripts -->
+  <script src="../assets/js/custom.js"></script>
+  <script src="../assets/js/owl.js"></script>
+  <script src="../assets/js/slick.js"></script>
+  <script src="../assets/js/accordions.js"></script>
+
+  <!-- Script files -->
+  <script src="../assets/js/callback.js"></script>
+  <script src="../assets/js/HeaderFooter.js"></script>
+
+  <style>
+    .radio-tile-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .radio-tile-group .input-container {
+      position: relative;
+      height: 5rem;
+      width: 5rem;
+      margin: 0.5rem;
+    }
+
+    .radio-tile-group .input-container .radio-button {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    .radio-tile-group .input-container .radio-tile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      border: 2px solid #079ad9;
+      border-radius: 5px;
+      padding: 1rem;
+      transition: transform 300ms ease;
+    }
+
+    .radio-tile-group .input-container .icon svg {
+      fill: #079ad9;
+      width: 3rem;
+      height: 3rem;
+    }
+
+    .radio-tile-group .input-container .radio-tile-label {
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #079ad9;
+    }
+
+    .radio-tile-group .input-container .radio-button:checked+.radio-tile {
+      background-color: #079ad9;
+      border: 2px solid #079ad9;
+      color: white;
+      transform: scale(1.1, 1.1);
+    }
+
+    .radio-tile-group .input-container .radio-button:checked+.radio-tile .icon svg {
+      fill: white;
+      background-color: #079ad9;
+    }
+
+    .radio-tile-group .input-container .radio-button:checked+.radio-tile .radio-tile-label {
+      color: white;
+      background-color: #079ad9;
+    }
+  </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Lobster');
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+    button {
+      text-decoration: none;
+      border: none;
+    }
+
+    .share-wrap {
+      position: absolute;
+      display: inline-table;
+      top: 67%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 15px;
+      text-align: center;
+    }
+
+    .share-btn {
+      color: #FFFFF0;
+      padding: 7px 25px;
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 100;
+      font-size: 14px;
+      font-family: 'Lobster', sans-serif;
+      background-color: rgba(63, 173, 168, .8);
+      text-transform: uppercase;
+      border-radius: 5px;
+      transition: background-color .5s;
+      -webkit-transition: background-color .5s;
+      -moz-transition: background-color .5s;
+      -o-transition: background-color .5s;
+    }
+
+    .share-btn:hover {
+      color: #FFFFF0;
+      text-decoration: none;
+      background-color: rgba(63, 173, 168, 1.0);
+    }
+
+    .resp-sharing-button__link,
+    .resp-sharing-button__icon {
+      display: inline-block
+    }
+
+    .resp-sharing-button__link {
+      text-decoration: none;
+      color: #fff;
+      margin: 2px;
+    }
+
+    .resp-sharing-button {
+      border-radius: 5px;
+      transition: 25ms ease-out;
+      padding: 6px 9px;
+      transition: background-color .5s;
+      -webkit-transition: background-color .5s;
+      -moz-transition: background-color .5s;
+      -o-transition: background-color .5s;
+    }
+
+    .resp-sharing-button__icon svg {
+      width: 1em;
+      height: 1em;
+      margin-right: 0.4em;
+      vertical-align: top
+    }
+
+    .resp-sharing-button--small svg {
+      margin: 0;
+      vertical-align: middle
+    }
+
+    .resp-sharing-button__icon,
+    .resp-sharing-button__icon--solid,
+    .resp-sharing-button__icon--solidcircle {
+      fill: #fff;
+      stroke: none
+    }
+
+    .resp-sharing-button--facebook {
+      background-color: #3b5998;
+      border-color: #3b5998;
+    }
+
+    .resp-sharing-button--facebook:hover,
+    .resp-sharing-button--facebook:active {
+      background-color: #2d4373;
+      border-color: #2d4373;
+    }
+
+    .resp-sharing-button--twitter {
+      background-color: #55acee;
+      border-color: #55acee;
+    }
+
+    .resp-sharing-button--twitter:hover,
+    .resp-sharing-button--twitter:active {
+      background-color: #2795e9;
+      border-color: #2795e9;
+    }
+
+    .resp-sharing-button--linkedin {
+      background-color: #0077b5;
+      border-color: #0077b5;
+    }
+
+    .resp-sharing-button--linkedin:hover,
+    .resp-sharing-button--linkedin:active {
+      background-color: #046293;
+      border-color: #046293;
+    }
+
+    @media only screen and (max-width: 768px) {
+      h1 {
+        font-size: 25px;
+      }
+
+      h2 {
+        font-size: 14px;
+      }
+
+      form#send .main-btn-rect {
+        padding: 7px 60px;
+        font-size: 14px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="preloader">
+    <div class="jumper">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+  <!-- MOdal-->
+  <div id="popup-reg" class="popup">
+    <div class="popup-content">
+      <div class="event-header">
+        <h6>Say Hi!</h6>
+      </div>
+      <form id="send" class="send-form">
+        <div class="form-group">
+          <label for="name">
+            <i class="fa fa-user"></i>
+          </label>
+          <input type="text" placeholder="Enter name..." id="name" name="name" required="required">
+
+        </div>
+        <div class="form-group">
+          <label for="phone">
+            <i class="fa fa-phone"></i>
+          </label>
+          <input type="tel" pattern="[0-9]{10}" placeholder="Enter phone..." id="phone" name="phone"
+            required="required">
+
+        </div>
+        <div class="form-group">
+          <label for="mail">
+            <i class="fa fa-envelope"></i>
+          </label>
+          <input type="email" placeholder="Enter mail..." id="mail" name="mail" required="required">
+
+        </div>
+        <div class="form-group">
+          <label for="text">
+            <i class="fa fa-comment"></i>
+          </label>
+          <textarea placeholder="Enter message..." name="text" id="text"></textarea>
+
+        </div>
+        <button type="submit" class="main-btn-rect" name="text" value="Send">
+          <i class="fa fa-paper-plane"></i>Send</button>
+      </form>
+      <span class="fade-out main-btn-circle">╳</span>
+    </div>
+  </div>
+  <!-- modal end-->
+
+  <!--Request Callback-->
+  <div id="callback"></div>
+
+  <!-- Home Starts Here -->
+  <div id="top">
+    <div id="subHeader"></div>
+    <div id="pageHeader"></div>
+
+    <div class="main-banner header-text">
+      <div class="Modern-Slider">
+        <!-- Item -->
+        <div class="item item-1">
+          <div class="img-fill">
+            <div class="text-content">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-6" style="margin-top:12vh">
+                    <h6>One stop learning platform in Data Science : We are here to guide you!</h6>
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Career Move<br>&amp; Data Science</h4>
+                    <p>Foundation of machine learning, hand-craftedly designed by industry leader, learn from some of
+                      the
+                      best data science professional in the world.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="col-md-12" style="text-align: center;">
+              <a href="#" class="filled-button popup-btn" data-popup="popup-reg">Request a call back</a>
+            </div> -->
+              <!-- <button type="button" class="main-btn-rect popup-btn" data-popup="popup-reg">Click me</button> -->
+
+            </div>
+          </div>
+        </div>
+        <!-- // Item -->
+      </div>
+    </div>
+
+  </div>
+  <!-- Home Ends Here -->
+  <!-- Resources Starts Here -->
+  <div id="resources">
+
+  </div>
+  <!-- Resources Ends Here -->
+  <!-- Blog Starts Here -->
+  <div id="blog">
+    <div class="blog-heading header-text">
+      <div class="container">
+        <div class="row blogMargin">
+          <div class="col-md-12">
+            <h1>Freshly Brewed Articles</h1>
+            <span>All about Data</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-8">
+            <figure class="snip1527">
+              <div class="image"><img src="https://miro.medium.com/max/1400/1*s7He49rEONuDkS0qxw_yvA.png"
+                  alt="pr-sample23" /></div>
+              <figcaption>
+                <div class="date"><span class="day">20</span><span class="month">June</span></div>
+                <h3>Multiclass text classification using bidirectional Recurrent Neural Network</h3>
+                <p style="color:white">
+                  In this article, we will learn about the basic architecture of the LSTM network. Then we will learn
+                  how
+                  we can build an LSTM machine learning model using Tensorflow 2.0 and Keras. For this application, we
+                  will use a competition dataset from Kaggle.
+                </p>
+              </figcaption>
+              <a
+                href="https://medium.com/analytics-vidhya/author-multi-class-text-classification-using-bidirectional-lstm-keras-c9a533a1cc4a?source=friends_link&sk=ed153d5125eb282928380084611ef24f"></a>
+            </figure>
+          </div>
+          <div class="col-md-4">
+            <figure class="snip1527">
+              <div class="image"><img src="https://miro.medium.com/max/1400/1*4FeRsslkfggjsYkdaGWZQw.png"
+                  alt="pr-sample23" /></div>
+              <figcaption>
+                <div class="date"><span class="day">20</span><span class="month">June</span></div>
+                <h3>Classification using Long Short Term Memory & GloVe (Global Vectors for Word Representation)</h3>
+                <p style="color:white">
+
+                  In this article, we will learn about the basic understanding of Word2Vec and pre-trained word
+                  embedding,
+                  Glove(Global Vectors for Word Representation). Then we will build an LSTM(Long Short Term Memory)
+                  model
+                  using a pre-trained Glove word embedding.
+                </p>
+              </figcaption>
+              <a
+                href="https://medium.com/analytics-vidhya/classification-using-long-short-term-memory-glove-global-vectors-for-word-representation-254d02d5e158?source=friends_link&sk=39ab305304b723e91011347c9b0e5d82"></a>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Blog Ends Here -->
+  <!-- About Us Starts Here -->
+  <div class="more-info" id="about-us">
+    <div id="about-company">
+      <div class="page-heading header-text">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1>About Us</h1>
+              <span>We have best team to drive Data Science courses.</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="more-info-content">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="left-image">
+                      <img src="../assets/images/more-info.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="col-md-7">
+                    <div class="right-content">
+                      <h2><em>Data Science is Complex, Emerging, Vast</em></h2>
+                      <span>We are ready to help you master and pace up!</span>
+                      <p>At datasciencekey, our focus is on creating industry relevant programs and provide learning
+                        experience that helps individual to learn, grow and become successful in their career ladder
+                        by
+                        demonstrating skills in emerging areas.<br><br>We are a team of highly enthusiast and
+                        skilled
+                        professionals, who has deep fascination to share knowledge and mentor others. Our mission is
+                        to
+                        provide, best in class learning experience in AI and Machine learning.
+                        <br><br>We train in superior technologies with the brightest minds to invent.
+                      </p>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 meetLeader"><span>Meet Our Leaders<i class="fa fa-arrow-right" aria-hidden="true"
+                  onclick=displayLead()></i></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="about-Lead">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 page-heading header-text">
+            <div class="row LeadHeading">
+              <div class="col-md-12 LeadHeading">
+                <h2>About Us</h2>
+                <p>We have best team to drive Data Science courses.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 companyText"><span><i class="fa fa-arrow-left" aria-hidden="true"
+                    onclick=displayCompany()></i>Know About Company</span></div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="team-item">
+                  <img src="../assets/images/sourav.jfif" alt="">
+                  <div class="down-content">
+                    <h4>Sourav Bhattacharyya</h4>
+                    <span>Mentor</span>
+                    <p>Experienced Data Scientist in Fashion & Retail field. Experienced in Machine Learning,
+                      Classifiers,
+                      Regression, Clustering, Data Mining, Natural Language Processing, Recommender Systems.
+                      Completed
+                      Master
+                      of Technology from Indian Institute of Engineering Science and Technology, Shibpur . Expert on
+                      Deep
+                      Learning (CNN, RNN, LSTM) and necessary deep learning frameworks (TensorFlow, Keras ).</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="team-item">
+                  <img src="../assets/images/dm.jfif" alt="">
+                  <div class="down-content">
+                    <h4>Dhiman Mandal</h4>
+                    <span>Mentor</span>
+                    <p>Experienced Data Science in Financial data with a demonstrated history of working in the
+                      computer
+                      software industry. Skilled in Big Data Analysis, Predictive Modelling, Machine Learning,
+                      Scalable
+                      and
+                      Distributed system. Strong professional with a Master of Technology (M.Tech.) focused in
+                      Computer
+                      Science from Indian Institute of Technology, Kharagpur. </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="team-item">
+                  <img src="../assets/images/sb.jfif" alt="">
+                  <div class="down-content">
+                    <h4>Sourav Bhattacharjee</h4>
+                    <span>Mentor</span>
+                    <p>Experienced Lead Software Engineer with a master degree from IIT Kharagpur. Expertised in
+                      end-to-end product development and Machine Learning. Bagged awards, publications and
+                      patent in ML. Works on improvising skill and mentoring learners.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="map">
+      <iframe src="https://maps.google.com/maps?q=marathalli&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%"
+        height="300px" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </div>
+  <!-- About Us Ends Here -->
+  <!-- Footer Starts Here -->
+  <div id="pageFooter"></div>
+  <div id="pageSubFooter"></div>
+  <!-- Footer Ends Here -->
+</body>
+
+</html>
