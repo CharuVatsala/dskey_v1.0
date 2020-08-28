@@ -946,7 +946,7 @@ ul.slick-dots {
 
 .more-info .right-content span {
 	text-transform: uppercase;
-	font-size: 1.5vw;
+	font-size: 20px;
 	color: #f7f7f7;
 	letter-spacing: 1px;
 	margin-bottom: 4vh;
@@ -954,7 +954,7 @@ ul.slick-dots {
 }
 
 .more-info .right-content h2 {
-	font-size: 2vw;
+	font-size: 29px;
 	font-weight: 600;
 	margin-bottom: 2vh;
 	color: #f7f7f7;
@@ -967,7 +967,7 @@ ul.slick-dots {
 
 .more-info .right-content p {
 	color: #f7f7f7;
-	font-size: 1.2vw;
+	font-size: 16px;
 }
 
 .meetLeader {
@@ -1366,14 +1366,14 @@ footer .contact-form button.filled-button:hover {
 
 .page-heading h1 {
 	text-transform: capitalize;
-	font-size: 2.5vw;
+	font-size: 32px;
 	font-weight: 700;
 	letter-spacing: 2px;
 	margin-bottom: 18px;
 }
 
 .page-heading span {
-	font-size: 15px;
+	font-size: 20px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	color: #fff;
@@ -1396,7 +1396,7 @@ footer .contact-form button.filled-button:hover {
 
 .blog-heading h1 {
 	text-transform: capitalize;
-	font-size: 2.5vw;
+	font-size: 32px;
 	font-weight: 700;
 	letter-spacing: 2px;
 	margin-bottom: 18px;
@@ -1406,7 +1406,7 @@ footer .contact-form button.filled-button:hover {
 }
 
 .blog-heading span {
-	font-size: 1.5vw;
+	font-size: 20px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	color: #fff;
@@ -1417,14 +1417,14 @@ footer .contact-form button.filled-button:hover {
 
 .LeadHeading h2 {
 	text-transform: capitalize;
-	font-size: 36px;
+	font-size: 32px;
 	font-weight: 700;
 	letter-spacing: 2px;
 	margin-bottom: 18px;
 }
 
 .LeadHeading p {
-	font-size: 15px;
+	font-size: 20px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	color: #fff;
@@ -1478,7 +1478,7 @@ footer .contact-form button.filled-button:hover {
 	letter-spacing: 0.25px;
 	margin-bottom: 2vh;
 	color: black;
-	font-size: 1.4vw;
+	font-size: 20px;
 }
 
 .team-item .down-content span {
